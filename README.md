@@ -31,37 +31,40 @@ Built a Windows Server 2025 Active Directory environment using VirtualBox.
 - Configured password policies
 
 ## Architecture
-
+```text
 Windows Server 2025 (DC01)
+│
 ├── Active Directory Domain Services (AD DS)
 ├── DNS Server
 │
 └── company.local
     │
     ├── IT OU
-    │    ├── M Baz
-    │    ├── Sarah Khan
-    │    └── IT Staff Group
+    │   ├── M Baz
+    │   ├── Sarah Khan
+    │   └── IT Staff Group
     │
     └── HR OU
-         ├── David Brown
-         └── HR Staff Group
+        ├── David Brown
+        └── HR Staff Group
+```
 
 ## Network Diagram
-
+```text
 Internet
-│
-▼
+   │
+   ▼
 VirtualBox Host
-│
-▼
+   │
+   ▼
 DC01 (Windows Server 2025)
-│
-├── Active Directory
-├── DNS
-├── Users
-├── Groups
-└── Group Policy
+   │
+   ├── Active Directory
+   ├── DNS
+   ├── Users
+   ├── Groups
+   └── Group Policy
+```
 
 ## What is a Domain Controller?
 A Domain Controller (DC) is a Windows Server that authenticates users, authorises access to resources, and enforces security policies within an Active Directory domain.
@@ -117,19 +120,19 @@ The Windows Server installation loaded successfully and the deployment continued
 ## Testing
 ### Test 1 – Domain Verification
 Verified that the company.local domain was successfully created and accessible through Active Directory Users and Computers.
-Result: ✅ Passed
+Result: Passed
 
 ### Test 2 – User and OU Verification
 Verified that the IT and HR Organizational Units were created and that user accounts were successfully added.
-Result: ✅ Passed
+Result: Passed
 
 ### Test 3 – Security Group Verification
 Verified that users were added to the correct security groups and group membership was displayed correctly.
-Result: ✅ Passed
+Result: Passed
 
 ### Test 4 – Password Policy Verification
 Verified that the minimum password length policy was configured to 10 characters through Group Policy Management.
-Result: ✅ Passed
+Result: Passed
 
 ## What I Learned
 - How to install and configure Windows Server 2025.
